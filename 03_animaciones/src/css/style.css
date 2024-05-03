@@ -1,0 +1,72 @@
+@import url("./normalize.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.main{
+    width: 100%;
+    border: 2px solid yellowgreen;
+}
+
+.div{
+    border: 2px solid gray;
+}
+
+.circle__001 {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    border-radius: 50%;
+    animation-name: changeColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
+
+}
+
+@keyframes changeColor {
+
+    0% {
+        background-color: blueviolet;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: aqua;
+    }
+
+}
+
+.circle__002 {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    border-radius: 50%;
+    /* Carga lo que dura y el tiempo que demora en cargar en segundos */
+    animation: 2s 2s changePosition infinite;
+}
+
+@keyframes changePosition {
+    0% {
+        transform: translate(0%);
+        background-color: black;
+    }
+    25%{
+        transform: translate(95vw, 0%);
+        background-color: snow;
+    }
+    75%{
+        transform: translate(95vw, 95vh);
+        background-color: plum;
+    }
+    100%{
+        transform: translate(0vw, 95vh);
+        background-color: black;
+    }
+}
